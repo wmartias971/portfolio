@@ -1,0 +1,3 @@
+styliser les bouton <title> un sombre et un clair et l'adapter avec js pour switch entre les 2
+
+développer + info stage et projet
