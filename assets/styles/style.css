@@ -2437,19 +2437,36 @@ button:focus {
 }
 
 /* Mode sombre */
-.modal-content.dark-mode {
+body.dark-mode .modal-content {
   background-color: #333; /* Couleur de fond sombre */
   color: white; /* Texte en blanc */
 }
 
-.modal-header.dark-mode {
+body.dark-mode .modal-header {
   border-bottom: 1px solid #444; /* Bordure plus claire pour le header */
 }
 
-.modal-footer.dark-mode {
+body.dark-mode .modal-footer {
   border-top: 1px solid #444; /* Bordure plus claire pour le footer */
 }
 
-.btn-close.dark-mode {
+body.dark-mode .btn-close {
   filter: invert(1); /* Inverser la couleur de l'icône de fermeture */
+}
+
+/* Styles pour les boutons de bascule */
+.btn.toggle-btn {
+  border-radius: 50%; /* Rendre les boutons ronds */
+  width: 40px; /* Largeur fixe */
+  height: 40px; /* Hauteur fixe */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #007BFF; /* Couleur de fond bleue */
+  color: white; /* Couleur du texte */
+  border: none; /* Supprimer la bordure */
+}
+
+.btn.toggle-btn:hover {
+  background-color: #0056b3; /* Couleur de fond au survol */
 }
