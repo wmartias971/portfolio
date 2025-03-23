@@ -2470,3 +2470,21 @@ body.dark-mode .btn-close {
 .btn.toggle-btn:hover {
   background-color: #0056b3; /* Couleur de fond au survol */
 }
+
+/* Styles pour les boutons de téléchargement */
+.download {
+  display: inline-block;
+  padding: 5px 15px;
+  font-size: 14px;
+  color: white;
+  background-color: #007bff;
+  border-radius: 25px;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.download:hover {
+  background-color: #0056b3;
+  text-decoration: none;
+}
