@@ -2488,3 +2488,62 @@ body.dark-mode .btn-close {
   background-color: #0056b3;
   text-decoration: none;
 }
+
+
+
+
+.stage {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #0056b3;
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #007bff;
+  color: white;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.redirect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  transition: background 0.3s;
+}
+
+.redirect:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.custom-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 15px;
+  font-size: 13px;
+  color: white;
+  background-color: #007bff;
+  border-radius: 0 25px 25px 0;
+  text-decoration: none;
+  border: none;
+  transition: background-color 0.3s ease;
+}
+
+.custom-download:hover {
+  background-color: #007bff;
+}
+
+.custom-download i, .redirect i {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.custom-download:hover i {
+  color: #007bff;
+}
