@@ -2430,7 +2430,6 @@ button:focus {
     - Modal Dark / Light
 ----------------------------------------------------------------- */
 
-/* Mode clair (par défaut) */
 .modal-content {
   background-color: white;
   color: black;
@@ -2438,37 +2437,42 @@ button:focus {
 
 /* Mode sombre */
 body.dark-mode .modal-content {
-  background-color: #333; /* Couleur de fond sombre */
-  color: white; /* Texte en blanc */
+  background-color: #333; 
+  color: white; 
 }
 
 body.dark-mode .modal-header {
-  border-bottom: 1px solid #444; /* Bordure plus claire pour le header */
+  border-bottom: 1px solid #444; 
 }
 
 body.dark-mode .modal-footer {
-  border-top: 1px solid #444; /* Bordure plus claire pour le footer */
+  border-top: 1px solid #444;
 }
 
 body.dark-mode .btn-close {
-  filter: invert(1); /* Inverser la couleur de l'icône de fermeture */
+  filter: invert(1); 
 }
 
-/* Styles pour les boutons de bascule */
+
+/* -----------------------------------------------------------------
+    - Bouton de Redirction / projects
+----------------------------------------------------------------- */
+
+
 .btn.toggle-btn {
-  border-radius: 50%; /* Rendre les boutons ronds */
-  width: 40px; /* Largeur fixe */
-  height: 40px; /* Hauteur fixe */
+  border-radius: 50%; 
+  width: 40px; 
+  height: 40px; 
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #007BFF; /* Couleur de fond bleue */
-  color: white; /* Couleur du texte */
-  border: none; /* Supprimer la bordure */
+  background-color: #007BFF; 
+  color: white; 
+  border: none; 
 }
 
 .btn.toggle-btn:hover {
-  background-color: #0056b3; /* Couleur de fond au survol */
+  background-color: #0056b3; 
 }
 
 /* Styles pour les boutons de téléchargement */
@@ -2490,7 +2494,9 @@ body.dark-mode .btn-close {
 }
 
 
-
+/* -----------------------------------------------------------------
+    - Bouton de Redirction / stage
+----------------------------------------------------------------- */
 
 .stage {
   display: inline-flex;
@@ -2547,3 +2553,399 @@ body.dark-mode .btn-close {
 .custom-download:hover i {
   color: #007bff;
 }
+
+/* Version indisponible */
+.case-item--unavailable {
+    opacity: 0.8;
+}
+
+.stage--unavailable {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    color: #6c757d;
+    cursor: not-allowed;
+}
+
+.redirect--unavailable {
+    color: #6c757d;
+    cursor: not-allowed;
+    width: 75%;
+    padding: 8px 12px;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.redirect--unavailable:hover {
+    background: transparent;
+}
+
+.custom-download--unavailable {
+    padding: 3px 15px;
+    font-size: 13px;
+    color: #6c757d;
+    background-color: #e9ecef;
+    border-radius: 0 25px 25px 0;
+    text-decoration: none;
+    border: none;
+    cursor: not-allowed;
+}
+
+.custom-download--unavailable i, 
+.redirect--unavailable i {
+    color: #6c757d;
+}
+
+/* Effets de survol désactivés */
+.stage--unavailable:hover,
+.custom-download--unavailable:hover,
+.redirect--unavailable:hover {
+    transform: none;
+    background-color: #e9ecef;
+}
+
+.no-modal-trigger, .no-modal-trigger * {
+  pointer-events: none;
+}
+/* -----------------------------------------------------------------
+    - Vielle Technologiques
+----------------------------------------------------------------- */
+
+.veille-card {
+  background: #fff; 
+  border-radius: 20px; 
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05); 
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid #EBF0F2; 
+}
+
+.veille-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.veille-card-header {
+  padding: 1.25rem 1.5rem;
+  background-color: #F7F9FA; 
+  border-bottom: 2px solid #EBF0F2; 
+}
+
+.veille-card-body {
+  padding: 1.5rem;
+}
+
+.veille-sources {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #EBF0F2; 
+}
+
+/* ========== TITRE ========== */
+.veille-sources h4 {
+  color: #3B4B5E; 
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.veille-sources ul {
+  padding-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+.veille-sources a {
+  color: #304CFD; 
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.veille-sources a:hover {
+  color: #1a3ad1;
+  text-decoration: underline;
+}
+
+/* Mode sombre */
+.dark-mode .veille-card {
+  background-color: #222; 
+  border-color: #444; 
+}
+
+.dark-mode .veille-card-header {
+  background-color: #2a2a2a; 
+  border-bottom-color: #444;
+}
+
+.dark-mode .veille-card-body {
+  color: #eee; /* Texte clair */
+}
+
+.dark-mode .veille-sources {
+  border-top-color: #444;
+}
+
+.dark-mode .veille-sources h4 {
+  color: #ddd;
+}
+
+.dark-mode .veille-sources a {
+  color: #4dabf7; 
+}
+
+.dark-mode .veille-sources a:hover {
+  color: #1e90ff;
+}
+/* ========== MODE CLAIR ========== */
+.veille-card-body {
+  padding: 1.5rem;
+}
+
+/* Style spécifique pour les h3  */
+.veille-card-header h3.title--h4 {
+  color: #2563EB;
+  position: relative;
+  display: inline-block;
+}
+
+.veille-card-header h3.title--h4::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #93C5FD;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.veille-card-header h3.title--h4:hover::after {
+  transform: scaleX(1);
+}
+
+/* Style pour les h6 */
+.veille-titre {
+  color: #2563EB;
+  font-size: 1.125rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+/* Titres secondaires */
+.veille-sources-titre {
+  color: #1E40AF;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+/* ========== MODE SOMBRE ========== */
+.dark-mode .veille-card-header h3.title--h4 {
+  color: #60A5FA;
+}
+
+.dark-mode .veille-card-header h3.title--h4::after {
+  background: #3B82F6;
+}
+
+.dark-mode .veille-titre {
+  color: #60A5FA;
+}
+
+.dark-mode .veille-sources-titre {
+  color: #93C5FD;
+}
+
+/* ========== LIEN ========== */
+
+.source-link {
+  color: #304CFD; 
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Texte "Source" */
+.source-link span {
+  transition: color 0.3s ease;
+}
+
+ /* ========== YOUTUBE ========== */
+
+.youtube-icon {
+  color: #FF0000; 
+  font-size: 1.2em;
+  transition: transform 0.3s ease;
+}
+
+/* Effets au survol */
+.source-link:hover span {
+  color: #1a3ad1; 
+  text-decoration: underline;
+}
+
+.source-link:hover .youtube-icon {
+  transform: scale(1.2);
+}
+
+/* Mode sombre */
+.dark-mode .source-link {
+  color: #4dabf7; 
+}
+
+.dark-mode .source-link:hover span {
+  color: #1e90ff;
+}
+
+.dark-mode .youtube-icon {
+  color: #FF3333; 
+}
+
+ /* ========== TIKTOK ========== */
+
+.tiktok-icon {
+  color: white; 
+  font-size: 1.2em; 
+  text-shadow: 
+      -2px -2px 5px #25F4EE,  
+      2px 2px 5px #FE2C55;  
+  transition: transform 0.3s ease;
+}
+
+.tiktok-icon:hover {
+  transform: scale(1.2);
+}
+
+
+/* Mode sombre */
+.dark-mode .tiktok-icon {
+  color: white; 
+  font-size: 1.2em; 
+  text-shadow: 
+      -2px -2px 5px #25F4EE, 
+      2px 2px 5px #FE2C55;   
+  transition: transform 0.3s ease;
+}
+
+ /* ========== CHROME ========== */
+.chrome-icon {
+  color: white; 
+  font-size: 1.1em; 
+  text-shadow: 
+      -2px -2px 5px #4285F4,  
+      2px 2px 5px #FFB900,   
+      -2px 2px 5px #0F9D58,  
+      2px -2px 5px #DB4437;  
+  transition: transform 0.3s ease;
+}
+
+/* Effets au survol */
+.chrome-icon:hover {
+  transform: scale(1.2); 
+}
+
+/* Mode sombre */
+.dark-mode .chrome-icon {
+  color: white;
+  font-size: 1.2em; 
+  text-shadow: 
+      -2px -2px 5px #4285F4,  
+      2px 2px 5px #FFB900,   
+      -2px 2px 5px #0F9D58,  
+      2px -2px 5px #DB4437; 
+  transition: transform 0.3s ease;
+}
+
+ /* ========== GITHUB ========== */
+
+.github-icon {
+  font-size: 1.2em; 
+  color: #181717; 
+  transition: transform 0.3s ease;
+}
+
+/* Effets au survol */
+.github-icon:hover {
+  transform: scale(1.2); 
+}
+
+/* Mode sombre  */
+.dark-mode .github-icon {
+  color: #ffffff; 
+}
+
+ /* ========== CHATGPT ========== */
+.chatgpt-icon {
+  width: 25px; 
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* Effets au survol */
+.chatgpt-icon:hover {
+  transform: scale(1.2); 
+}
+
+/* Mode sombre */
+.dark-mode .chatgpt-icon {
+  filter: invert(1); 
+}
+
+ /* ========== REDDIT ========== */
+.reddit-icon {
+  font-size: 1.2em; 
+  color: #FF4500; 
+  transition: transform 0.3s ease;
+}
+
+/* Effets au survol */
+.reddit-icon:hover {
+  transform: scale(1.2); 
+}
+
+/* Mode sombre */
+.dark-mode .reddit-icon {
+  color: #FF7F50; 
+}
+
+ /* ========== JeuxVideo-icon ========== */
+.jv-icon {
+  width: 25px; 
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+
+.jv-icon:hover {
+  transform: scale(1.2); 
+}
+
+/* position lien*/
+
+.veille-sources ul {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 10px;
+  padding-left: 10px; 
+}
+
+
+.veille-sources ul li {
+  flex: 0 0 calc(50% - 10px); 
+  box-sizing: border-box; 
+}
+
+
+.source-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-decoration: none;
+}
+
+.source-link span {
+  margin-right: 3px; 
+}
+
+
+
+
+
+

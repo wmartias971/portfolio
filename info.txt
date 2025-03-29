@@ -1,6 +1,21 @@
 styliser les bouton <title> de certification ceux qui apparait quand on reste longtemps un sombre et un clair et l'adapter avec js pour switch entre les 2
 
+faire veille technologique
+
 développer + info stage et projet
 faire grossir les pop up
-le modal s'ouvre pas quand on click sur le lien
-faire veille technologique
+refaire les fichier .rar pour mettre le fichier sql de la bdd
+
+enlever le js et css inutile
+le modal s'ouvre pas quand on click sur le lien {impossible}
+
+cd "C:\Users\wineu\portfolio\wilhan martias"
+git add .
+git commit -m "Veille Technologique" 
+git push --force origin main
+
+today
+les source veille technologiques
+Chronomots, Bibliothèque de Jeux a terminer a developper
+
+youtube
