@@ -2603,8 +2603,32 @@ body.dark-mode .btn-close {
     background-color: #e9ecef;
 }
 
-.no-modal-trigger, .no-modal-trigger * {
-  pointer-events: none;
+.download--unavailable {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+}
+
+.download--unavailable:hover {
+  background-color: #e9ecef;
+  text-decoration: none;
+}
+
+.download--unavailable i {
+  color: #6c757d;
+}
+
+.case-item--unavailable,
+.stage--unavailable,
+.redirect--unavailable,
+.custom-download--unavailable {
+    cursor: not-allowed;
+}
+
+/* Héritage pour les enfants */
+.stage--unavailable *,
+.case-item--unavailable * {
+    cursor: inherit;
 }
 /* -----------------------------------------------------------------
     - Vielle Technologiques
@@ -2800,57 +2824,29 @@ body.dark-mode .btn-close {
 
  /* ========== TIKTOK ========== */
 
-.tiktok-icon {
-  color: white; 
-  font-size: 1.2em; 
-  text-shadow: 
-      -2px -2px 5px #25F4EE,  
-      2px 2px 5px #FE2C55;  
+ .tiktok-icon {
+  width: 21px; 
+  height: auto;
   transition: transform 0.3s ease;
 }
+
 
 .tiktok-icon:hover {
-  transform: scale(1.2);
-}
-
-
-/* Mode sombre */
-.dark-mode .tiktok-icon {
-  color: white; 
-  font-size: 1.2em; 
-  text-shadow: 
-      -2px -2px 5px #25F4EE, 
-      2px 2px 5px #FE2C55;   
-  transition: transform 0.3s ease;
-}
-
- /* ========== CHROME ========== */
-.chrome-icon {
-  color: white; 
-  font-size: 1.1em; 
-  text-shadow: 
-      -2px -2px 5px #4285F4,  
-      2px 2px 5px #FFB900,   
-      -2px 2px 5px #0F9D58,  
-      2px -2px 5px #DB4437;  
-  transition: transform 0.3s ease;
-}
-
-/* Effets au survol */
-.chrome-icon:hover {
   transform: scale(1.2); 
 }
 
-/* Mode sombre */
-.dark-mode .chrome-icon {
-  color: white;
-  font-size: 1.2em; 
-  text-shadow: 
-      -2px -2px 5px #4285F4,  
-      2px 2px 5px #FFB900,   
-      -2px 2px 5px #0F9D58,  
-      2px -2px 5px #DB4437; 
+
+
+ /* ========== CHROME ========== */
+ .chrome-icon {
+  width: 22px; 
+  height: auto;
   transition: transform 0.3s ease;
+}
+
+
+.chrome-icon:hover {
+  transform: scale(1.2); 
 }
 
  /* ========== GITHUB ========== */
@@ -2907,7 +2903,7 @@ body.dark-mode .btn-close {
 
  /* ========== JeuxVideo-icon ========== */
 .jv-icon {
-  width: 25px; 
+  width: 22px; 
   height: auto;
   transition: transform 0.3s ease;
 }
@@ -2943,6 +2939,7 @@ body.dark-mode .btn-close {
 .source-link span {
   margin-right: 3px; 
 }
+
 
 
 

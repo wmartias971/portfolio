@@ -82,21 +82,6 @@ $(document).ready(function() {
     }
 	
 	
-    /*-----------------------------------------------------------------
-      Scroll indicator
-    -------------------------------------------------------------------*/
-  
-    function scrollIndicator() {
-        $(window).on('scroll', function() {
-            var wintop = $(window).scrollTop(), docheight = 
-            $(document).height(), winheight = $(window).height();
- 	        var scrolled = (wintop/(docheight-winheight))*100;
-  	        $('.scroll-line').css('width', (scrolled + '%'));
-        });
-    }
-	
-	scrollIndicator(); //Init
-	
 	
     /*-----------------------------------------------------------------
       Jarallax
@@ -142,15 +127,6 @@ $(document).ready(function() {
     }
 	
 	scrollToTop(); //Init
-    
-	
-    /*-----------------------------------------------------------------
-      Autoresize textarea
-    -------------------------------------------------------------------*/	
-
-    $('textarea').each(function(){
-        autosize(this);
-    });
 
 
     /*-----------------------------------------------------------------
@@ -176,157 +152,5 @@ $(document).ready(function() {
         });
 
 	});
-	
-	
-    /*-----------------------------------------------------------------
-      Tooltip
-    -------------------------------------------------------------------*/
-	
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
-
-
-    /*-----------------------------------------------------------------
-      Switch categories & Filter mobile
-    -------------------------------------------------------------------*/	
-  
-    $('.select').on('click','.placeholder',function(){
-      var parent = $(this).closest('.select');
-      if ( ! parent.hasClass('is-open')){
-          parent.addClass('is-open');
-          $('.select.is-open').not(parent).removeClass('is-open');
-      }else{
-          parent.removeClass('is-open');
-      }
-    }).on('click','ul>li',function(){
-        var parent = $(this).closest('.select');
-        parent.removeClass('is-open').find('.placeholder').text( $(this).text() );
-        parent.find('input[type=hidden]').attr('value', $(this).attr('data-value') );
-	
-	    $('.filter__item').removeClass('active');
-	    $(this).addClass('active');
-	    var selector = $(this).attr('data-filter');
-		
-	    $('.js-filter-container').isotope({
-	        filter: selector
-	    });
-	    return false;	
-    });
-
-
-    /*-----------------------------------------------------------------
-      Masonry
-    -------------------------------------------------------------------*/	
-	
-    // Portfolio grid row
-    var $portfolioMasonry = $('.js-grid-row').isotope({
-        itemSelector: '.gallery-grid__item',
-	    layoutMode: 'fitRows',
-        percentPosition: true,
-	    transitionDuration: '0.5s',
-        hiddenStyle: {
-            opacity: 0,
-            transform: 'scale(0.001)'
-        },
-        visibleStyle: {
-            opacity: 1,
-            transform: 'scale(1)'
-        },
-        fitRows: {
-            gutter: '.gutter-sizer'
-        },	
-        masonry: {
-	        columnWidth: '.gallery-grid__item',
-            gutter: '.gutter-sizer',
-            isAnimated: true
-        }
-    });
-  
-    $portfolioMasonry.imagesLoaded().progress( function() {
-        $portfolioMasonry.isotope ({
-	        columnWidth: '.gallery-grid__item',
-            gutter: '.gutter-sizer',
-            isAnimated: true,
-	        layoutMode: 'fitRows',
-            fitRows: {
-                gutter: '.gutter-sizer'
-            }
-	    });
-    });	
-
-	// Portfolio grid irregular
-	var $portfolioIrregularMasonry = $('.js-grid').isotope({
-        itemSelector: '.gallery-grid__item',
-        percentPosition: true,
-	    transitionDuration: '0.5s',
-        hiddenStyle: {
-            opacity: 0,
-            transform: 'scale(0.001)'
-        },
-        visibleStyle: {
-            opacity: 1,
-            transform: 'scale(1)'
-        },
-        masonry: {
-	        columnWidth: '.gallery-grid__item',
-            gutter: '.gutter-sizer',
-            isAnimated: true
-        }
-    });
-  
-    $portfolioIrregularMasonry.imagesLoaded().progress( function() {
-        $portfolioIrregularMasonry.isotope ({
-	        columnWidth: '.gallery-grid__item',
-            gutter: '.gutter-sizer',
-            isAnimated: true
-	    });
-    });
-	
-	
-    /*-----------------------------------------------------------------
-      niceScroll
-    -------------------------------------------------------------------*/		
-
-    $('textarea').niceScroll({
-		horizrailenabled:false
-	});
-
-
-    /*-----------------------------------------------------------------
-      emoji add in textarea
-    -------------------------------------------------------------------*/
-	
-    $(function() {
-        $('.emoji-wrap img').on('click', function(){
-            var emoji = $(this).attr('title');
-            $('#commentForm').val($('#commentForm').val()+" "+emoji+" ");
-        });
-    });
-
-
-    /*-----------------------------------------------------------------
-	  mediumZoom
-    -------------------------------------------------------------------*/
-  
-    mediumZoom('[data-zoom]', {
-        margin: 30
-    });
-
-	
-    /*-----------------------------------------------------------------
-      Lazyload
-    -------------------------------------------------------------------*/
-
-    lazySizes.init();
-
-	
-    /*-----------------------------------------------------------------
-      Polyfill object-fit
-    -------------------------------------------------------------------*/	
-	
-    var $someImages = $('img.cover');
-    objectFitImages($someImages);
-	
 });
 
