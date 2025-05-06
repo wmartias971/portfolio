@@ -1,20 +1,18 @@
-développer projet
-mettre les images "stage" et les adapter
 refaire les fichier .rar pour mettre le fichier sql de la bdd
-
-enlever le css inutile
-envoyer le GitHub pour que chatgpt vois les fautes ?
 
 cd "C:\Users\wineu\portfolio\wilhan martias"
 git add .
-git commit -m "Veille Technologique" 
+git commit -m "developpement des stage et +" 
 git push --force origin main
 
-Chronomots, Bibliothèque de Jeux a terminer a developper
-
-pofiner ActuMoto
 reduire la veille technologiques ?
 
 gestion d'incident 
 
 btsSio2025!
+
+mettre mais project sur GitHub mais sans github-pages
+
+ActuMoto (no GitHub)
+Aichi doner les code pour qu'il fasse l'explication pour moi 
+et mini maps abandonner (no GitHub)
